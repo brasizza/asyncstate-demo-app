@@ -1,11 +1,11 @@
-import 'package:asyncstate/class/async_class.dart';
+import 'package:asyncstate/asyncstate.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/modules/home/home_page.dart';
 import 'pages/my_loading.dart';
 
 void main() {
-  AsyncStateClass.onInitAsyncState(
+  AsyncState.onInitAsyncState(
     defaultDialogWidget: const MyLoading(),
   );
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      navigatorObservers: [AsyncStateClass.observer],
+      navigatorObservers: [AsyncState.observer],
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
